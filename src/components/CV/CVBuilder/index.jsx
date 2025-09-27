@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import CVEditor from "../CVEditor";
+import Profile from "../CVEditor/Profile";
+import Summary from "../CVEditor/Summary";
+import Skills from "../CVEditor/Skills";
 import CVPreview from "../CVPreview";
 import { saveAsImage } from "../utils/saveAsImage";
 
@@ -48,7 +50,10 @@ export default function CVBuilder() {
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-3">
         <div className="md:col-span-1">
-          <CVEditor data={data} setData={setData} />
+          <Profile data={data} setData={setData} />
+          <Summary data={data} setData={setData} />
+          <Skills data={data} setData={setData} />
+          
           <div className="flex gap-2 mt-4">
             <button className="!bg-black text-white flex-1" onClick={clearAll}>
               Xóa thông tin

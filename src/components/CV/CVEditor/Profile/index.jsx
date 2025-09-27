@@ -16,44 +16,71 @@ export default function Profile({ data, setData }) {
 
     return (
         <div className="pb-4">
-            <div className="bg-white p-4 rounded shadow">
-                <h3 className="font-semibold mb-2">Thông tin cá nhân</h3>
-                <div className="flex items-center gap-3">
-                    <img
-                        src={data.profile.avatar}
-                        alt="avatar"
-                        className="w-20 h-20 object-cover rounded-full border"
-                    />
+            <div className="bg-white p-6 rounded-2xl shadow-md border">
+                <h3 className="font-semibold text-lg mb-4 text-gray-800">Thông tin cá nhân</h3>
+
+                {/* Avatar upload */}
+                <div className="flex items-center gap-4">
+                    <div className="relative group">
+                        <img
+                            src={data.profile.avatar}
+                            alt="avatar"
+                            className="w-24 h-24 object-cover rounded-full border shadow-sm group-hover:opacity-80 transition"
+                        />
+                    </div>
                     <div className="flex-1">
-                        <label className="block text-sm">Tải ảnh:</label>
-                        <input type="file" accept="image/*" onChange={handleAvatarChange} />
+                        <label className="block text-sm font-medium text-gray-600 mb-1">
+                            Tải ảnh:
+                        </label>
+                        <input
+                            type="file"
+                            accept="image/*"
+                            onChange={handleAvatarChange}
+                            className="block w-full text-sm text-gray-500 file:mr-3 file:py-2 file:px-4
+                                       file:rounded-full file:border-0 file:text-sm file:font-semibold
+                                       file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                        />
                     </div>
                 </div>
-                <div className="mt-3 space-y-2">
-                    <input
-                        className="w-full input"
-                        placeholder="Họ và tên"
-                        value={data.profile.name}
-                        onChange={(e) => handleProfileChange("name", e.target.value)}
-                    />
-                    <input
-                        className="w-full input"
-                        placeholder="Chức danh"
-                        value={data.profile.title}
-                        onChange={(e) => handleProfileChange("title", e.target.value)}
-                    />
-                    <input
-                        className="w-full input"
-                        placeholder="Email"
-                        value={data.profile.email}
-                        onChange={(e) => handleProfileChange("email", e.target.value)}
-                    />
-                    <input
-                        className="w-full input"
-                        placeholder="Số điện thoại"
-                        value={data.profile.phone}
-                        onChange={(e) => handleProfileChange("phone", e.target.value)}
-                    />
+
+                {/* Inputs */}
+                <div className="mt-5 grid gap-4">
+                    <div>
+                        <label className="block text-sm font-medium text-gray-600 mb-1">Họ và tên</label>
+                        <input
+                            className="w-full input border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                            placeholder="Nhập họ và tên"
+                            value={data.profile.name}
+                            onChange={(e) => handleProfileChange("name", e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium text-gray-600 mb-1">Chức danh</label>
+                        <input
+                            className="w-full input border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                            placeholder="Nhập chức danh"
+                            value={data.profile.title}
+                            onChange={(e) => handleProfileChange("title", e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium text-gray-600 mb-1">Email</label>
+                        <input
+                            className="w-full input border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                            placeholder="Nhập email"
+                            value={data.profile.email}
+                            onChange={(e) => handleProfileChange("email", e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium text-gray-600 mb-1">Số điện thoại</label>
+                        <input
+                            className="w-full input border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                            placeholder="Nhập số điện thoại"
+                            value={data.profile.phone}
+                            onChange={(e) => handleProfileChange("phone", e.target.value)}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

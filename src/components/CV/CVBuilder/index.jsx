@@ -8,6 +8,8 @@ import Contact from "../CVEditor/Contact";
 import Project from "../CVEditor/Project";
 import ScrollButtons from "../../ScrollButtons";
 
+import avatarDefault from "../../../assets/avatarsUser/avatar-default.jpg";
+
 import CVPreview from "../CVPreview";
 import { saveAsImage } from "../utils/saveAsImage";
 
@@ -15,7 +17,7 @@ const DEFAULT = {
   profile: {
     name: "Nguyễn Văn A",
     title: "Frontend Developer",
-    avatar: "/assets/avatarsUser/avatar-default.jpg",
+    avatar: avatarDefault,
     email: "nguyenvana@example.com",
     phone: "0123 456 789",
     location: "Huế, Việt Nam",

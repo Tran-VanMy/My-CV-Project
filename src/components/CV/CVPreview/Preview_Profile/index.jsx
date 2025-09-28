@@ -10,7 +10,7 @@ export default function Preview_Profile({ data }) {
             />
             <div>
                 <h1 className="text-2xl font-bold">{data.profile.name}</h1>
-                <div className="text-sm opacity-90">{data.profile.title}</div>
+                <div className="text-sm pt-4 opacity-90">{data.profile.title}</div>
                 <div className="mt-2 text-sm opacity-90">
                     {data.profile.email} • {data.profile.phone}
                 </div>

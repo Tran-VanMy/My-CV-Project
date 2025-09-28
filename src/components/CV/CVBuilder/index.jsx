@@ -6,6 +6,7 @@ import Experience from "../CVEditor/Experience";
 import Education from "../CVEditor/Education";
 import Contact from "../CVEditor/Contact";
 import Project from "../CVEditor/Project";
+import ScrollButtons from "../../ScrollButtons";
 
 import CVPreview from "../CVPreview";
 import { saveAsImage } from "../utils/saveAsImage";
@@ -61,7 +62,7 @@ export default function CVBuilder() {
           <Contact data={data} setData={setData} field="contacts" nameSection="Liên Hệ" />
           
           
-          <div className="flex gap-2 mt-4">
+          <div className="flex gap-2 mt-2">
             <button className="!bg-black text-white flex-1" onClick={clearAll}>
               Xóa thông tin
             </button>
@@ -77,6 +78,9 @@ export default function CVBuilder() {
         <div className="md:col-span-3 md:ml-5">
           <CVPreview data={data} previewRef={previewRef} />
         </div>
+
+        {/* Nút scroll lên/xuống */}
+        <ScrollButtons />
       </div>
     </div>
   );

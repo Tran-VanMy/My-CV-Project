@@ -40,13 +40,13 @@ export default function Contact({ data, setData, field, nameSection }) {
 
         <div className="flex gap-2 mb-2">
           <input
-            className="flex-1 border px-2 py-1 rounded"
+            className="flex-1 min-w-0 border px-2 py-1 rounded"
             placeholder="Location"
             value={newLocation}
             onChange={(e) => setNewLocation(e.target.value)}
           />
           <button
-            className="btn px-3"
+            className="flex-shrink-0 px-3 py-1 rounded"
             onClick={() => addSingleItem("location", newLocation)}
           >
             +
@@ -55,13 +55,13 @@ export default function Contact({ data, setData, field, nameSection }) {
 
         <div className="flex gap-2 mb-2">
           <input
-            className="flex-1 border px-2 py-1 rounded"
+            className="flex-1 min-w-0 border px-2 py-1 rounded"
             placeholder="Website"
             value={newWebsite}
             onChange={(e) => setNewWebsite(e.target.value)}
           />
           <button
-            className="btn px-3"
+            className="flex-shrink-0 px-3 py-1 rounded"
             onClick={() => addSingleItem("website", newWebsite)}
           >
             +
@@ -70,13 +70,13 @@ export default function Contact({ data, setData, field, nameSection }) {
 
         <div className="flex gap-2 mb-2">
           <input
-            className="flex-1 border px-2 py-1 rounded"
+            className="flex-1 min-w-0 border px-2 py-1 rounded"
             placeholder="Github"
             value={newGithub}
             onChange={(e) => setNewGithub(e.target.value)}
           />
           <button
-            className="btn px-3"
+            className="flex-shrink-0 px-3 py-1 rounded"
             onClick={() => addSingleItem("github", newGithub)}
           >
             +
@@ -85,13 +85,13 @@ export default function Contact({ data, setData, field, nameSection }) {
 
         <div className="flex gap-2 mb-2">
           <input
-            className="flex-1 border px-2 py-1 rounded"
+            className="flex-1 min-w-0 border px-2 py-1 rounded"
             placeholder="LinkedIn"
             value={newLinkedin}
             onChange={(e) => setNewLinkedin(e.target.value)}
           />
           <button
-            className="btn px-3"
+            className="flex-shrink-0 px-3 py-1 rounded"
             onClick={() => addSingleItem("linkedin", newLinkedin)}
           >
             +

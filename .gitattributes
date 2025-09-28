@@ -1,0 +1,20 @@
+# Tự động chuẩn hóa line ending
+* text=auto eol=lf
+
+# Xử lý đặc biệt cho các loại file
+*.js     text eol=lf
+*.jsx    text eol=lf
+*.ts     text eol=lf
+*.tsx    text eol=lf
+*.css    text eol=lf
+*.html   text eol=lf
+*.json   text eol=lf
+*.md     text eol=lf
+
+# Giữ nguyên binary file
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.pdf    binary

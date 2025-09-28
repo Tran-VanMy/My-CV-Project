@@ -30,7 +30,7 @@ export default function Section({ data, setData, field, nameSection }) {
                 </h3>
 
                 {/* Input thêm mới */}
-                <div className="flex gap-2">
+                <div className="flex flex-col sm:flex-row gap-2">
                     <input
                         className="flex-1 px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm"
                         placeholder={`Thêm ${nameSection}`}
@@ -39,12 +39,13 @@ export default function Section({ data, setData, field, nameSection }) {
                         onKeyDown={(e) => e.key === "Enter" && addItem()}
                     />
                     <button
-                        className="px-4 py-2 !bg-black text-white rounded-lg transition text-sm"
+                        className="px-4 py-2 !bg-black text-white rounded-lg transition text-sm w-full sm:w-auto"
                         onClick={addItem}
                     >
                         Thêm
                     </button>
                 </div>
+
 
                 {/* Danh sách item */}
                 <div className="mt-4 flex flex-col gap-2">

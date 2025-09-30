@@ -16,7 +16,7 @@ export default function Preview_Project({ data, field, nameSection }) {
                         {p.title} <span className="text-gray-600">({p.role})</span>
                     </div>
                     {p.description && (
-                        <div className="text-sm text-gray-700 mt-1 leading-relaxed">
+                        <div className="text-sm text-gray-700 mt-1 leading-relaxed whitespace-pre-line">
                             {p.description}
                         </div>
                     )}

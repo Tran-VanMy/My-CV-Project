@@ -18,7 +18,7 @@ export default function Preview_Experiences({ data, field, nameSection }) {
                     <div className="text-xs text-gray-500 italic">
                         {e.from} → {e.to}
                     </div>
-                    <div className="text-sm text-gray-700 mt-1 leading-relaxed">
+                    <div className="text-sm text-gray-700 mt-1 leading-relaxed whitespace-pre-line">
                         {e.description}
                     </div>
                 </div>
